@@ -7,73 +7,70 @@ To implement Opening and Closing using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
-Import the necessary packages.
+Import the necessary pacakages
+
 
 ### Step2:
-Create the Text using cv2.putText.
+Create the text using cv2.putText
 
 ### Step3:
-Create the structuring element.
+Create the structuring element
 
 ### Step4:
-Use Opening operation.
+Erode the image
 
 ### Step5:
-Use Closing Operation. 
+Dilate the Image
+ 
 ## Program:
-```
-DEVELOPED BY: Sai Vishal D
-REGISTER NO: 212223230180
-```
+
+``` Python
 # Import the necessary packages
-```
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+     
+
+# Create a blank image
+image = np.zeros((500, 500, 3), dtype=np.uint8)
+
+# Add text on the image using cv2.putText
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(image, 'Open and Close', (100, 250), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+
+
+# Create a simple square kernel (3x3)
+kernel = np.ones((3, 3), np.uint8)
+
+# Display the input image
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB for displaying
+plt.title("Input Image with Text")
+plt.axis('off')
 ```
-# Create the Text using cv2.putText
+![alt text](image.png)
+
+```python
+
+# Opening is erosion followed by dilation
+opened_image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+
+# Display the result of Opening
+plt.imshow(cv2.cvtColor(opened_image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB
+plt.title("Opening Operation")
+plt.axis('off')
 ```
-img = np.zeros((100, 550), dtype = 'uint8')
-font = cv2.FONT_ITALIC
-cv2.putText(img, 'SAI VISHAL', (5,70), font, 2, (255), 5, cv2.LINE_AA)
-n_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-plt.imshow(n_img)
-plt.axis("off")
-```
-# Create the structuring element
-```
-kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (11,11))
-```
-# Use Opening operation
-```
-image_open = cv2.morphologyEx(n_img, cv2.MORPH_OPEN, kernel)
-plt.imshow(image_open)
-plt.axis("off")
-```
+![alt text](image-1.png)
+```python
 # Use Closing Operation
+# Closing is dilation followed by erosion
+closed_image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+# Display the result of Closing
+plt.imshow(cv2.cvtColor(closed_image , cv2.COLOR_BGR2RGB))  # Convert BGR to RGB
+plt.title("Closing Operation")
+plt.axis('off')
+
 ```
-image_close = cv2.morphologyEx(n_img, cv2.MORPH_CLOSE, kernel)
-plt.imshow(image_close)
-plt.axis("off")
-```
-## Output:
-
-### Display the input Image
-
-![image](https://github.com/user-attachments/assets/abab17b6-b092-4d16-94cd-aec880c8ff3e)
-
-
-
-### Display the result of Opening
-
-![image](https://github.com/user-attachments/assets/fdff88e3-ad59-4230-82af-7d1784f00fe2)
-
-
-
-### Display the result of Closing
-
-
-![image](https://github.com/user-attachments/assets/67038684-3de3-4f32-9bf9-c3cef2e05349)
+![alt text](image-2.png)
 
 
 ## Result
