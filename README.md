@@ -47,8 +47,6 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB for dis
 plt.title("Input Image with Text")
 plt.axis('off')
 ```
-![alt text](image.png)
-
 ```python
 
 # Opening is erosion followed by dilation
@@ -59,7 +57,6 @@ plt.imshow(cv2.cvtColor(opened_image, cv2.COLOR_BGR2RGB))  # Convert BGR to RGB
 plt.title("Opening Operation")
 plt.axis('off')
 ```
-![alt text](image-1.png)
 ```python
 # Use Closing Operation
 # Closing is dilation followed by erosion
@@ -70,7 +67,10 @@ plt.title("Closing Operation")
 plt.axis('off')
 
 ```
-![alt text](image-2.png)
+## Output:
+![image](https://github.com/user-attachments/assets/debf13a6-bfad-4ddf-8a89-d58875faca42)
+![image](https://github.com/user-attachments/assets/7206a06d-f1ed-4cfe-9509-100449e3a7d0)
+![image](https://github.com/user-attachments/assets/aaf2c411-3e9f-40a5-816c-7f2f2d925577)
 
 
 ## Result
