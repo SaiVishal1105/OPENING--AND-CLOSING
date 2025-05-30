@@ -68,9 +68,10 @@ plt.axis('off')
 
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/debf13a6-bfad-4ddf-8a89-d58875faca42)
-![image](https://github.com/user-attachments/assets/7206a06d-f1ed-4cfe-9509-100449e3a7d0)
-![image](https://github.com/user-attachments/assets/aaf2c411-3e9f-40a5-816c-7f2f2d925577)
+![image](https://github.com/user-attachments/assets/23babf2e-17c1-4c5a-88e0-c8cc8e255323)
+![image](https://github.com/user-attachments/assets/611a2348-9edf-4ead-9ca4-afee024e47b0)
+![image](https://github.com/user-attachments/assets/614a6230-f3ca-4b5d-af86-edad8c32aed9)
+
 
 
 ## Result
